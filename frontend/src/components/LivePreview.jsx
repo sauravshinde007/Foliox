@@ -15,7 +15,7 @@ const LivePreview = () => {
       <div className="bg-gray-100 p-4 rounded-lg">
         <div className="transform scale-75 origin-top w-[133%] -ml-[16.5%]">
           {TemplateComponent && (
-            <TemplateComponent data={resumeData} />
+            <TemplateComponent data={resumeData} isPdf={false} />
           )}
         </div>
       </div>

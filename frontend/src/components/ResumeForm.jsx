@@ -67,7 +67,7 @@ const ArraySection = ({ section, data, updateResumeData, addArrayItem, removeArr
         </h3>
         <button
           onClick={handleAddItem}
-          className="btn-primary flex items-center gap-2 text-sm"
+          className="btn btn-primary flex items-center gap-2 text-sm"
         >
           <Plus size={16} />
           Add {section.title.slice(0, -1)}

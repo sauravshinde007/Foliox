@@ -7,14 +7,12 @@ export const templates = [
     name: 'Minimal',
     description: 'Clean and simple design',
     component: MinimalTemplate,
-    preview: '/templates/minimal-preview.jpg'
   },
   {
     id: 'modern',
     name: 'Modern',
     description: 'Contemporary professional layout',
     component: ModernTemplate,
-    preview: '/templates/modern-preview.jpg'
   }
 ];
 
