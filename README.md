@@ -1,4 +1,4 @@
-# Resume \& Portfolio Generator
+# Foliox: Resume \& Portfolio Generator
 
 Professional resume builder with live preview and PDF export.
 
