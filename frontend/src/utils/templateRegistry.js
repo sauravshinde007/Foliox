@@ -4,6 +4,12 @@ import CreativeTemplate from '../components/templates/CreativeTemplate';
 
 export const templates = [
   {
+    id: 'minimal',
+    name: 'Minimal',
+    description: 'Clean and simple design',
+    component: MinimalTemplate,
+  },
+  {
     id: 'modern',
     name: 'Modern',
     description: 'Contemporary professional layout',
@@ -14,12 +20,6 @@ export const templates = [
     name: 'Creative',
     description: 'Colorful and artistic design',
     component: CreativeTemplate,
-  },
-  {
-    id: 'minimal',
-    name: 'Minimal',
-    description: 'Clean and simple design',
-    component: MinimalTemplate,
   },
 ];
 
