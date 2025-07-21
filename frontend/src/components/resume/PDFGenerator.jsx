@@ -1,8 +1,8 @@
 import React from 'react';
 import { Download } from 'lucide-react';
 import { PDFDownloadLink } from '@react-pdf/renderer';
-import { useResumeContext } from '../context/ResumeContext';
-import { getTemplate } from '../utils/templateRegistry';
+import { useResumeContext } from "../../context/ResumeContext";
+import { getTemplate } from "../../utils/templateRegistry";
 
 const PDFGenerator = () => {
   const { resumeData, selectedTemplate } = useResumeContext();

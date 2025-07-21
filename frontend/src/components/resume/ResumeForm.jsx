@@ -1,7 +1,7 @@
 import React from 'react';
 import { Plus, Trash2 } from 'lucide-react';
-import { useResumeContext } from '../context/ResumeContext';
-import { formSections } from '../data/formSchema';
+import { useResumeContext } from '../../context/ResumeContext';
+import { formSections } from '../../data/formSchema';
 
 const FormField = ({ field, value, onChange, section, index = null }) => {
   const handleChange = (e) => {

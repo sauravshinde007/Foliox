@@ -15,119 +15,77 @@ export const minimalConfig = {
   sections: [summarySection, experienceSection, educationSection, skillsSection],
   
   pdfStyles: StyleSheet.create({
-    page: { 
-      padding: 40, 
-      fontFamily: 'Helvetica', 
-      backgroundColor: '#FFFFFF', 
+    page: {
+      padding: 40,
+      fontFamily: 'Helvetica',
+      backgroundColor: '#FFFFFF',
       color: '#000000'
     },
-    
-    // Personal Information Section WITHOUT TITLE
-    personalSection: { 
-      marginBottom: 30, 
-      borderBottomWidth: 1, 
-      borderBottomColor: '#000000', 
+    // Personal Information Section - ADDED
+    personalSection: {
+      marginBottom: 30,
+      borderBottomWidth: 1,
+      borderBottomColor: '#000000',
       paddingBottom: 20,
       alignItems: 'center'
     },
-    name: { 
-      fontSize: 24, 
-      fontWeight: 'bold', 
-      color: '#000000', 
-      marginBottom: 15, 
-      textAlign: 'center' 
+    name: {
+      fontSize: 24,
+      fontWeight: 'bold',
+      color: '#000000',
+      marginBottom: 15,
+      textAlign: 'center'
     },
-    // FIXED: Ensure all contact info renders
-    contactInfo: { 
-      fontSize: 10, 
-      color: '#000000', 
-      marginBottom: 4, 
-      textAlign: 'center' 
+    contactInfo: {
+      fontSize: 10,
+      color: '#000000',
+      marginBottom: 4,
+      textAlign: 'center'
     },
-    linkText: { 
-      fontSize: 10, 
-      color: '#000000', 
-      textAlign: 'center', 
+    linkText: {
+      fontSize: 10,
+      color: '#000000',
+      textAlign: 'center',
       marginBottom: 4
     },
-    
-    // Rest of your existing styles...
-    section: { marginBottom: 25 },
-    sectionTitle: { 
-      fontSize: 14, 
-      fontWeight: 'bold', 
-      color: '#000000', 
-      marginBottom: 12, 
-      borderBottomWidth: 1, 
-      borderBottomColor: '#000000', 
+    // Regular sections
+    section: { marginBottom: 20 },
+    sectionTitle: {
+      fontSize: 14,
+      fontWeight: 'bold',
+      color: '#000000',
+      marginBottom: 10,
+      borderBottomWidth: 1,
+      borderBottomColor: '#000000',
       paddingBottom: 3
     },
-    summaryText: { 
-      fontSize: 10, 
-      lineHeight: 1.4, 
-      color: '#000000', 
-      textAlign: 'justify'
-    },
-    experienceItem: { marginBottom: 15 },
-    experienceHeader: { 
-      flexDirection: 'row', 
-      justifyContent: 'space-between', 
-      marginBottom: 5
-    },
-    jobTitle: { fontSize: 11, fontWeight: 'bold', color: '#000000' },
-    company: { fontSize: 10, color: '#000000' },
+    summaryText: { fontSize: 10, lineHeight: 1.4, color: '#000000', textAlign: 'justify' },
+    experienceItem: { marginBottom: 14 },
+    experienceHeader: { flexDirection: 'row', justifyContent: 'space-between', marginBottom: 4 },
+    jobTitle: { fontSize: 12, fontWeight: 'bold', color: '#000000' },
+    company: { fontSize: 11, color: '#000000', fontWeight: 'bold' },
     dateRange: { fontSize: 9, color: '#000000' },
-    description: { 
-      fontSize: 10, 
-      color: '#000000', 
-      lineHeight: 1.3, 
-      marginTop: 3
-    },
-    educationItem: { marginBottom: 12 },
-    educationHeader: { 
-      flexDirection: 'row', 
-      justifyContent: 'space-between', 
-      marginBottom: 3
-    },
-    degree: { fontSize: 11, fontWeight: 'bold', color: '#000000' },
+    description: { fontSize: 10, color: '#000000', lineHeight: 1.4 },
+    educationItem: { flexDirection: 'row', justifyContent: 'space-between', marginBottom: 12 },
+    educationContent: { flex: 1 },
+    degree: { fontSize: 12, fontWeight: 'bold', color: '#000000' },
     school: { fontSize: 10, color: '#000000' },
-    field: { fontSize: 9, color: '#000000' },
-    yearGpa: { textAlign: 'right' },
     year: { fontSize: 9, color: '#000000' },
-    gpa: { fontSize: 9, color: '#000000', marginTop: 2 },
-    skillCategory: { marginBottom: 12 },
-    skillTitle: { 
-      fontSize: 11, 
-      fontWeight: 'bold', 
-      color: '#000000', 
-      marginBottom: 8
-    },
-    skillsRow: { flexDirection: 'row', flexWrap: 'wrap' },
-    skillTag: { 
-      backgroundColor: '#FFFFFF', 
-      color: '#000000', 
-      fontSize: 9, 
-      paddingHorizontal: 8, 
-      paddingVertical: 3, 
-      marginRight: 6, 
-      marginBottom: 4,
-      borderWidth: 1,
-      borderColor: '#000000'
-    }
+    skillCategory: { marginBottom: 10 },
+    skillTitle: { fontSize: 12, fontWeight: 'bold', color: '#000000', marginBottom: 6 },
+    skillItem: { fontSize: 10, color: '#000000', marginBottom: 2 }
   }),
   
   webClasses: {
     container: 'bg-white shadow-lg rounded-lg overflow-hidden max-w-4xl mx-auto border border-black',
-    content: 'p-10',
-    
-    // Personal Information WITHOUT TITLE
+    content: 'p-8',
+    // Personal Information - ADDED
     personalSection: 'mb-8 border-b border-black pb-5 text-center',
     name: 'text-2xl font-bold text-black mb-4',
     contactContainer: 'space-y-1 text-xs text-black mb-2',
     linkContainer: 'space-y-1 text-xs mt-2',
     linkText: 'text-black hover:underline',
-    
-    // Rest of your existing web classes...
+    // Regular sections
     section: 'mb-6',
     sectionTitle: 'text-sm font-bold text-black mb-3 border-b border-black pb-1',
     summaryText: 'text-xs text-black leading-relaxed text-justify',
@@ -137,27 +95,22 @@ export const minimalConfig = {
     company: 'text-xs text-black',
     dateRange: 'text-xs text-black',
     description: 'text-xs text-black leading-relaxed mt-1',
-    educationItem: 'mb-3',
-    educationHeader: 'flex justify-between items-start',
+    educationItem: 'mb-3 flex justify-between items-start',
     degree: 'text-xs font-bold text-black',
     school: 'text-xs text-black',
-    field: 'text-xs text-black',
-    yearGpa: 'text-right',
     year: 'text-xs text-black',
-    gpa: 'text-xs text-black mt-1',
     skillCategory: 'mb-3',
     skillTitle: 'text-xs font-bold text-black mb-2',
-    skillsRow: 'flex flex-wrap gap-1',
+    skillsContainer: 'flex flex-wrap gap-1',
     skillTag: 'px-2 py-1 bg-white text-black text-xs border border-black'
   }
 };
-
 
 // Fixed Modern Template Config
 export const modernConfig = {
   id: 'modern',
   name: 'Modern',
-  description: 'Professional blue theme with simple styling',
+  description: 'Contemporary professional layout',
   
   sections: [summarySection, experienceSection, educationSection, skillsSection],
   
@@ -166,237 +119,113 @@ export const modernConfig = {
       padding: 0,
       fontFamily: 'Helvetica',
       backgroundColor: '#FFFFFF',
-      color: '#000000'
+      color: '#374151'
     },
-    
-    // Simple Blue Header
+    // Personal Information Section - ADDED
     personalSection: {
-      backgroundColor: '#1E40AF', // Simple blue
-      padding: 30,
-      marginBottom: 25
-    },
-    personalTitle: {
-      fontSize: 14,
-      fontWeight: 'bold',
-      color: '#FFFFFF',
-      marginBottom: 12,
-      textAlign: 'center'
+      backgroundColor: '#2563EB',
+      padding: 32,
+      marginBottom: 24
     },
     name: {
       fontSize: 28,
       fontWeight: 'bold',
       color: '#FFFFFF',
-      marginBottom: 15,
+      marginBottom: 16,
       textAlign: 'center'
     },
-    contactInfo: { 
-      fontSize: 11, 
-      color: '#FFFFFF', 
-      marginBottom: 4, 
+    contactInfo: {
+      fontSize: 11,
+      color: '#FFFFFF',
+      opacity: 0.9,
+      marginBottom: 4,
       textAlign: 'center'
     },
-    linkText: { 
-      fontSize: 11, 
-      color: '#FFFFFF', 
-      textAlign: 'center', 
+    linkText: {
+      fontSize: 11,
+      color: '#FFFFFF',
+      textAlign: 'center',
       marginBottom: 4
     },
-    
-    // Simple Sections
-    section: { 
-      marginBottom: 25, 
-      paddingHorizontal: 30
-    },
+    // Regular sections
+    section: { marginBottom: 24, paddingHorizontal: 32 },
     sectionTitle: {
-      fontSize: 16,
+      fontSize: 18,
       fontWeight: 'bold',
-      color: '#1E40AF',
-      marginBottom: 15,
-      borderBottomWidth: 2,
-      borderBottomColor: '#1E40AF',
-      paddingBottom: 5
+      color: '#111827',
+      marginBottom: 12,
+      borderLeftWidth: 4,
+      borderLeftColor: '#2563EB',
+      paddingLeft: 12
     },
-    summaryText: { 
-      fontSize: 11, 
-      lineHeight: 1.5, 
-      color: '#000000',
-      textAlign: 'justify'
-    },
-    
-    // Simple Experience
-    experienceItem: { 
-      marginBottom: 18,
-      paddingBottom: 15,
-      borderBottomWidth: 1,
-      borderBottomColor: '#E5E7EB'
-    },
-    experienceHeader: { 
-      flexDirection: 'row', 
-      justifyContent: 'space-between', 
-      marginBottom: 6
-    },
-    jobTitle: { 
-      fontSize: 13, 
-      fontWeight: 'bold', 
-      color: '#000000'
-    },
-    company: { 
-      fontSize: 12, 
-      color: '#1E40AF', 
-      fontWeight: 'bold'
-    },
-    dateRange: { 
-      fontSize: 10, 
-      color: '#000000',
-      backgroundColor: '#F3F4F6',
-      paddingHorizontal: 8,
-      paddingVertical: 3
-    },
-    description: { 
-      fontSize: 11, 
-      color: '#000000', 
-      lineHeight: 1.4, 
-      marginTop: 4
-    },
-    
-    // Simple Education
-    educationItem: { 
-      marginBottom: 15,
-      paddingBottom: 12,
-      borderBottomWidth: 1,
-      borderBottomColor: '#F3F4F6'
-    },
-    educationHeader: { 
-      flexDirection: 'row', 
-      justifyContent: 'space-between', 
-      marginBottom: 4
-    },
-    degree: { 
-      fontSize: 12, 
-      fontWeight: 'bold', 
-      color: '#000000'
-    },
-    school: { 
-      fontSize: 11, 
-      color: '#1E40AF'
-    },
-    field: { 
-      fontSize: 10, 
-      color: '#000000'
-    },
-    yearGpa: { 
-      textAlign: 'right' 
-    },
-    year: { 
-      fontSize: 10, 
-      color: '#000000',
-      backgroundColor: '#F3F4F6',
-      paddingHorizontal: 6,
-      paddingVertical: 2
-    },
-    gpa: { 
-      fontSize: 9, 
-      color: '#000000', 
-      marginTop: 2
-    },
-    
-    // Simple Skills
-    skillCategory: { 
-      marginBottom: 15
-    },
-    skillTitle: { 
-      fontSize: 13, 
-      fontWeight: 'bold', 
-      color: '#1E40AF', 
-      marginBottom: 10
-    },
-    skillsRow: { 
-      flexDirection: 'row', 
-      flexWrap: 'wrap'
-    },
-    skillTag: { 
-      backgroundColor: '#F3F4F6', 
-      color: '#1E40AF', 
-      fontSize: 10, 
-      paddingHorizontal: 10, 
-      paddingVertical: 4, 
-      marginRight: 6, 
-      marginBottom: 6,
-      borderWidth: 1,
-      borderColor: '#1E40AF'
-    }
+    summaryText: { fontSize: 11, lineHeight: 1.6, paddingLeft: 12 },
+    experienceItem: { marginBottom: 16, paddingLeft: 12, borderLeftWidth: 2, borderLeftColor: '#E5E7EB' },
+    experienceHeader: { flexDirection: 'row', justifyContent: 'space-between', marginBottom: 4 },
+    jobTitle: { fontSize: 14, fontWeight: 'bold', color: '#111827' },
+    company: { fontSize: 12, color: '#2563EB', fontWeight: 'bold' },
+    dateRange: { fontSize: 10, backgroundColor: '#F3F4F6', paddingHorizontal: 8, paddingVertical: 4, borderRadius: 12 },
+    description: { fontSize: 11, color: '#374151', lineHeight: 1.5 },
+    educationItem: { flexDirection: 'row', justifyContent: 'space-between', marginBottom: 12, paddingLeft: 12 },
+    educationContent: { flex: 1 },
+    degree: { fontSize: 14, fontWeight: 'bold', color: '#111827' },
+    school: { fontSize: 12, color: '#2563EB' },
+    year: { fontSize: 10, backgroundColor: '#F3F4F6', paddingHorizontal: 8, paddingVertical: 4, borderRadius: 12 },
+    skillCategory: { marginBottom: 12, paddingLeft: 12 },
+    skillTitle: { fontSize: 14, fontWeight: 'bold', color: '#111827', marginBottom: 8 },
+    skillItem: { fontSize: 10, color: '#374151', marginBottom: 2 }
   }),
   
   webClasses: {
     container: 'bg-white shadow-lg rounded-lg overflow-hidden max-w-4xl mx-auto',
     content: '',
-    
-    // Simple Blue Header
-    personalSection: 'bg-blue-800 text-white p-8 text-center',
-    personalTitle: 'text-sm font-bold mb-3 uppercase',
+    // Personal Information - ADDED (NO GRADIENT)
+    personalSection: 'bg-blue-600 text-white p-8 text-center',
     name: 'text-3xl font-bold mb-4',
-    contactContainer: 'space-y-1 text-sm mb-2',
+    contactContainer: 'space-y-1 text-sm opacity-90 mb-2',
     linkContainer: 'space-y-1 text-sm mt-2',
     linkText: 'hover:underline',
-    
-    // Simple Sections
-    section: 'mb-6 px-8',
-    sectionTitle: 'text-base font-bold text-blue-800 mb-4 border-b-2 border-blue-800 pb-1',
-    summaryText: 'text-sm text-black leading-relaxed text-justify',
-    
-    // Simple Experience
-    experienceItem: 'mb-5 pb-4 border-b border-gray-200',
+    // Regular sections
+    section: 'mb-8 px-8',
+    sectionTitle: 'text-xl font-bold text-gray-900 mb-4 border-l-4 border-blue-600 pl-3',
+    summaryText: 'text-gray-700 leading-relaxed pl-3',
+    experienceItem: 'mb-6 pl-4 border-l-2 border-gray-100',
     experienceHeader: 'flex justify-between items-start mb-2',
-    jobTitle: 'text-sm font-bold text-black',
-    company: 'text-sm text-blue-800 font-bold',
-    dateRange: 'text-xs text-black bg-gray-100 px-2 py-1',
-    description: 'text-sm text-black leading-relaxed mt-1',
-    
-    // Simple Education
-    educationItem: 'mb-4 pb-3 border-b border-gray-100',
-    educationHeader: 'flex justify-between items-start',
-    degree: 'text-sm font-bold text-black',
-    school: 'text-sm text-blue-800',
-    field: 'text-xs text-black',
-    yearGpa: 'text-right',
-    year: 'text-xs text-black bg-gray-100 px-2 py-1',
-    gpa: 'text-xs text-black mt-1',
-    
-    // Simple Skills
-    skillCategory: 'mb-4',
-    skillTitle: 'text-sm font-bold text-blue-800 mb-3',
-    skillsRow: 'flex flex-wrap gap-2',
-    skillTag: 'px-3 py-1 bg-gray-100 text-blue-800 text-xs border border-blue-800'
+    jobTitle: 'text-lg font-semibold text-gray-900',
+    company: 'text-blue-600 font-medium',
+    dateRange: 'text-sm bg-gray-100 px-3 py-1 rounded-full text-gray-600',
+    description: 'text-gray-700 leading-relaxed mt-3',
+    educationItem: 'mb-4 flex justify-between items-start pl-3',
+    degree: 'text-lg font-semibold text-gray-900',
+    school: 'text-blue-600',
+    year: 'text-sm bg-gray-100 px-3 py-1 rounded-full text-gray-600',
+    skillCategory: 'mb-4 pl-3',
+    skillTitle: 'text-lg font-semibold text-gray-900 mb-3',
+    skillsContainer: 'flex flex-wrap gap-2',
+    skillTag: 'px-4 py-2 bg-blue-100 text-blue-800 rounded-lg text-sm font-medium'
   }
 };
 
+// Fixed Creative Template Config
 export const creativeConfig = {
   id: 'creative',
   name: 'Creative',
-  description: 'Simple colorful professional design',
+  description: 'Colorful and artistic design',
   
   sections: [summarySection, experienceSection, educationSection, skillsSection],
   
   pdfStyles: StyleSheet.create({
     page: {
-      padding: 35,
+      padding: 32,
       fontFamily: 'Helvetica',
-      backgroundColor: '#FFFFFF',
-      color: '#000000'
+      backgroundColor: '#FEF7FF',
+      color: '#374151'
     },
-    
-    // Simple Purple Header
+    // Personal Information Section - ADDED
     personalSection: {
-      backgroundColor: '#7C2D92', // Simple purple
-      padding: 25,
-      marginBottom: 25
-    },
-    personalTitle: {
-      fontSize: 13,
-      fontWeight: 'bold',
-      color: '#FFFFFF',
-      marginBottom: 10,
-      textAlign: 'center'
+      backgroundColor: '#7C3AED',
+      padding: 24,
+      borderRadius: 12,
+      marginBottom: 24
     },
     name: {
       fontSize: 26,
@@ -405,184 +234,168 @@ export const creativeConfig = {
       marginBottom: 12,
       textAlign: 'center'
     },
-    contactInfo: { 
-      fontSize: 10, 
-      color: '#FFFFFF', 
-      marginBottom: 3, 
+    contactInfo: {
+      fontSize: 10,
+      color: '#E9D5FF',
+      marginBottom: 3,
       textAlign: 'center'
     },
-    linkText: { 
-      fontSize: 10, 
-      color: '#FFFFFF', 
-      textAlign: 'center', 
+    linkText: {
+      fontSize: 10,
+      color: '#FFFFFF',
+      textAlign: 'center',
       marginBottom: 3
     },
-    
-    // Simple Sections
-    section: { 
-      marginBottom: 22
-    },
+    // Regular sections
+    section: { marginBottom: 20 },
     sectionTitle: {
-      fontSize: 15,
+      fontSize: 16,
       fontWeight: 'bold',
-      color: '#7C2D92',
-      marginBottom: 12,
-      borderBottomWidth: 2,
-      borderBottomColor: '#7C2D92',
-      paddingBottom: 4
+      color: '#7C3AED',
+      marginBottom: 10,
+      backgroundColor: '#F3E8FF',
+      padding: 8,
+      borderRadius: 6
     },
-    summaryText: { 
-      fontSize: 10, 
-      lineHeight: 1.4, 
-      color: '#000000',
-      textAlign: 'justify'
-    },
-    
-    // Simple Experience
-    experienceItem: { 
-      marginBottom: 16,
-      paddingBottom: 12,
-      borderBottomWidth: 1,
-      borderBottomColor: '#E5E7EB'
-    },
-    experienceHeader: { 
-      marginBottom: 5
-    },
-    jobTitle: { 
-      fontSize: 12, 
-      fontWeight: 'bold', 
-      color: '#7C2D92'
-    },
-    company: { 
-      fontSize: 11, 
-      color: '#059669', 
-      fontWeight: 'bold'
-    },
-    dateRange: { 
-      fontSize: 9, 
-      color: '#DC2626',
-      backgroundColor: '#FEF2F2',
-      paddingHorizontal: 6,
-      paddingVertical: 2
-    },
-    description: { 
-      fontSize: 10, 
-      color: '#000000', 
-      lineHeight: 1.3,
-      marginTop: 3
-    },
-    
-    // Simple Education
-    educationItem: { 
-      marginBottom: 14,
-      paddingBottom: 10,
-      borderBottomWidth: 1,
-      borderBottomColor: '#F3F4F6'
-    },
-    educationHeader: { 
-      flexDirection: 'row', 
-      justifyContent: 'space-between', 
-      marginBottom: 3
-    },
-    degree: { 
-      fontSize: 11, 
-      fontWeight: 'bold', 
-      color: '#7C2D92'
-    },
-    school: { 
-      fontSize: 10, 
-      color: '#059669'
-    },
-    field: { 
-      fontSize: 9, 
-      color: '#000000'
-    },
-    yearGpa: { 
-      textAlign: 'right' 
-    },
-    year: { 
-      fontSize: 9, 
-      color: '#DC2626',
-      backgroundColor: '#FEF2F2',
-      paddingHorizontal: 5,
-      paddingVertical: 2
-    },
-    gpa: { 
-      fontSize: 8, 
-      color: '#000000', 
-      marginTop: 2
-    },
-    
-    // Simple Skills
-    skillCategory: { 
-      marginBottom: 12
-    },
-    skillTitle: { 
-      fontSize: 12, 
-      fontWeight: 'bold', 
-      color: '#7C2D92', 
-      marginBottom: 8
-    },
-    skillsRow: { 
-      flexDirection: 'row', 
-      flexWrap: 'wrap'
-    },
-    skillTag: { 
-      backgroundColor: '#F0FDF4', 
-      color: '#059669', 
-      fontSize: 9, 
-      paddingHorizontal: 8, 
-      paddingVertical: 3, 
-      marginRight: 5, 
-      marginBottom: 5,
-      borderWidth: 1,
-      borderColor: '#059669'
-    }
+    summaryText: { fontSize: 10, lineHeight: 1.5, color: '#374151' },
+    experienceItem: { marginBottom: 14, backgroundColor: '#FFFFFF', padding: 12, borderRadius: 8 },
+    experienceHeader: { flexDirection: 'row', justifyContent: 'space-between', marginBottom: 4 },
+    jobTitle: { fontSize: 12, fontWeight: 'bold', color: '#7C3AED' },
+    company: { fontSize: 11, color: '#10B981', fontWeight: 'bold' },
+    dateRange: { fontSize: 9, color: '#F59E0B', fontWeight: 'bold' },
+    description: { fontSize: 10, color: '#374151', lineHeight: 1.4 },
+    educationItem: { flexDirection: 'row', justifyContent: 'space-between', marginBottom: 12, backgroundColor: '#FFFFFF', padding: 10, borderRadius: 8 },
+    educationContent: { flex: 1 },
+    degree: { fontSize: 12, fontWeight: 'bold', color: '#7C3AED' },
+    school: { fontSize: 10, color: '#10B981' },
+    year: { fontSize: 9, color: '#F59E0B', fontWeight: 'bold' },
+    skillCategory: { marginBottom: 10 },
+    skillTitle: { fontSize: 12, fontWeight: 'bold', color: '#7C3AED', marginBottom: 6 },
+    skillItem: { fontSize: 10, color: '#374151', marginBottom: 2 }
   }),
   
   webClasses: {
-    container: 'bg-white shadow-lg rounded-lg overflow-hidden max-w-4xl mx-auto',
+    container: 'bg-purple-50 shadow-lg rounded-lg overflow-hidden max-w-4xl mx-auto',
     content: 'p-8',
-    
-    // Simple Purple Header
-    personalSection: 'text-center mb-6 bg-purple-700 text-white p-6',
-    personalTitle: 'text-sm font-bold mb-3 uppercase',
-    name: 'text-3xl font-bold mb-3',
-    contactContainer: 'space-y-1 text-sm mb-2',
+    // Personal Information - ADDED (NO GRADIENT)
+    personalSection: 'text-center mb-8 bg-purple-600 text-white p-6 rounded-lg',
+    name: 'text-3xl font-bold mb-4',
+    contactContainer: 'space-y-1 text-sm opacity-90 mb-2',
     linkContainer: 'space-y-1 text-sm mt-2',
     linkText: 'hover:underline',
-    
-    // Simple Sections
-    section: 'mb-6',
-    sectionTitle: 'text-base font-bold text-purple-700 mb-3 border-b-2 border-purple-700 pb-1',
-    summaryText: 'text-sm text-black leading-relaxed text-justify',
-    
-    // Simple Experience
-    experienceItem: 'mb-4 pb-3 border-b border-gray-200',
-    experienceHeader: 'mb-1',
-    jobTitle: 'text-sm font-bold text-purple-700',
-    company: 'text-sm text-green-600 font-bold',
-    dateRange: 'text-xs text-red-600 bg-red-50 px-2 py-1',
-    description: 'text-sm text-black leading-relaxed',
-    
-    // Simple Education
-    educationItem: 'mb-4 pb-3 border-b border-gray-100',
-    educationHeader: 'flex justify-between items-start',
-    degree: 'text-sm font-bold text-purple-700',
-    school: 'text-sm text-green-600',
-    field: 'text-xs text-black',
-    yearGpa: 'text-right',
-    year: 'text-xs text-red-600 bg-red-50 px-2 py-1',
-    gpa: 'text-xs text-black mt-1',
-    
-    // Simple Skills
-    skillCategory: 'mb-3',
-    skillTitle: 'text-sm font-bold text-purple-700 mb-2',
-    skillsRow: 'flex flex-wrap gap-1',
-    skillTag: 'px-2 py-1 bg-green-50 text-green-700 text-xs border border-green-600'
+    // Regular sections
+    section: 'mb-8',
+    sectionTitle: 'text-xl font-semibold text-purple-700 mb-3 bg-purple-100 px-4 py-2 rounded-lg',
+    summaryText: 'text-gray-700 leading-relaxed',
+    experienceItem: 'mb-6 bg-white p-4 rounded-lg shadow-sm',
+    experienceHeader: 'flex justify-between items-start mb-2',
+    jobTitle: 'text-lg font-medium text-purple-700',
+    company: 'text-green-600 font-medium',
+    dateRange: 'text-sm text-yellow-600 font-semibold',
+    description: 'text-gray-700 leading-relaxed',
+    educationItem: 'mb-4 flex justify-between items-start bg-white p-3 rounded-lg shadow-sm',
+    degree: 'text-lg font-medium text-purple-700',
+    school: 'text-green-600',
+    year: 'text-sm text-yellow-600 font-semibold',
+    skillCategory: 'mb-4',
+    skillTitle: 'text-lg font-medium text-purple-700 mb-2',
+    skillsContainer: 'flex flex-wrap gap-2',
+    skillTag: 'px-3 py-1 bg-purple-200 text-purple-800 rounded-full text-sm font-medium'
   }
 };
 
-
-
-
+// Fixed Professional Template Config
+export const professionalConfig = {
+  id: 'professional',
+  name: 'Professional',
+  description: 'Corporate and formal layout',
+  
+  sections: [summarySection, experienceSection, educationSection, skillsSection],
+  
+  pdfStyles: StyleSheet.create({
+    page: {
+      padding: 40,
+      fontFamily: 'Helvetica',
+      backgroundColor: '#FFFFFF',
+      color: '#1F2937'
+    },
+    // Personal Information Section - ADDED
+    personalSection: {
+      marginBottom: 30,
+      borderBottomWidth: 3,
+      borderBottomColor: '#1F2937',
+      paddingBottom: 20
+    },
+    name: {
+      fontSize: 28,
+      fontWeight: 'bold',
+      color: '#1F2937',
+      marginBottom: 8,
+      textAlign: 'left'
+    },
+    contactInfo: {
+      fontSize: 11,
+      color: '#4B5563',
+      marginBottom: 4
+    },
+    linkText: {
+      fontSize: 11,
+      color: '#1F2937',
+      marginBottom: 4
+    },
+    // Regular sections
+    section: { marginBottom: 25 },
+    sectionTitle: {
+      fontSize: 18,
+      fontWeight: 'bold',
+      color: '#1F2937',
+      marginBottom: 12,
+      textTransform: 'uppercase',
+      letterSpacing: 1
+    },
+    summaryText: { fontSize: 11, lineHeight: 1.6, color: '#374151', textAlign: 'justify' },
+    experienceItem: { marginBottom: 18 },
+    experienceHeader: { marginBottom: 6 },
+    jobTitle: { fontSize: 14, fontWeight: 'bold', color: '#1F2937', marginBottom: 2 },
+    company: { fontSize: 12, color: '#4B5563', fontWeight: 'bold', marginBottom: 2 },
+    dateRange: { fontSize: 10, color: '#6B7280', fontStyle: 'italic' },
+    description: { fontSize: 11, color: '#374151', lineHeight: 1.5, marginTop: 4 },
+    educationItem: { marginBottom: 15 },
+    educationContent: { marginBottom: 4 },
+    degree: { fontSize: 14, fontWeight: 'bold', color: '#1F2937', marginBottom: 2 },
+    school: { fontSize: 12, color: '#4B5563', marginBottom: 2 },
+    year: { fontSize: 10, color: '#6B7280', fontStyle: 'italic' },
+    skillCategory: { marginBottom: 12 },
+    skillTitle: { fontSize: 14, fontWeight: 'bold', color: '#1F2937', marginBottom: 8, textTransform: 'uppercase' },
+    skillItem: { fontSize: 11, color: '#374151', marginBottom: 3 }
+  }),
+  
+  webClasses: {
+    container: 'bg-white shadow-xl rounded-lg overflow-hidden max-w-4xl mx-auto border-2 border-gray-200',
+    content: 'p-10',
+    // Personal Information - ADDED
+    personalSection: 'mb-8 border-b-4 border-gray-800 pb-6',
+    name: 'text-3xl font-bold text-gray-800 mb-2',
+    contactContainer: 'flex flex-col gap-1 text-sm text-gray-600',
+    linkContainer: 'flex flex-col gap-1 text-sm text-gray-600 mt-2',
+    linkText: 'text-gray-800 underline hover:text-gray-600',
+    // Regular sections
+    section: 'mb-10',
+    sectionTitle: 'text-xl font-bold text-gray-800 mb-4 uppercase tracking-wider',
+    summaryText: 'text-gray-700 leading-relaxed text-justify',
+    experienceItem: 'mb-8',
+    experienceHeader: 'mb-3',
+    jobTitle: 'text-lg font-bold text-gray-800',
+    company: 'text-gray-600 font-semibold mb-1',
+    dateRange: 'text-sm text-gray-500 italic',
+    description: 'text-gray-700 leading-relaxed mt-2',
+    educationItem: 'mb-6',
+    degree: 'text-lg font-bold text-gray-800',
+    school: 'text-gray-600 mb-1',
+    year: 'text-sm text-gray-500 italic',
+    skillCategory: 'mb-4',
+    skillTitle: 'text-lg font-semibold text-gray-800 mb-3 uppercase tracking-wide',
+    skillsContainer: 'flex flex-wrap gap-2',
+    skillTag: 'px-4 py-2 bg-gray-200 text-gray-800 text-sm font-medium border border-gray-300'
+  }
+};

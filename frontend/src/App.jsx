@@ -1,32 +1,31 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LandingPage from './pages/LandingPage';
+import ResumeBuilder from './pages/ResumeBuilder';
+import Navbar from './components/common/Navbar';
+import Footer from './components/common/Footer';
 import { ResumeProvider } from './context/ResumeContext';
-import ResumeForm from './components/ResumeForm';
-import LivePreview from './components/LivePreview';
-import PDFGenerator from './components/PDFGenerator';
 
-const App = () => (
-  <ResumeProvider>
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Left Side - Form */}
-          <div className="lg:max-h-screen lg:overflow-y-auto lg:pr-4">
-            <ResumeForm />
-          </div>
-          
-          {/* Right Side - Live Preview */}
-          <div className="lg:max-h-screen lg:overflow-y-auto lg:pl-4">
-            <div className="lg:sticky lg:top-0">
-              <LivePreview />
-            </div>
-          </div>
-        </div>
+const App = () => {
+  return (
+    <Router>
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
+        <main className="flex-1">
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route 
+              path="/resume/:templateId" 
+              element={
+                  <ResumeBuilder />
+              } 
+            />
+          </Routes>
+        </main>
+        <Footer />
       </div>
-      
-      {/* Download Button */}
-      <PDFGenerator />
-    </div>
-  </ResumeProvider>
-);
+    </Router>
+  );
+};
 
 export default App;
