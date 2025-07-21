@@ -17,9 +17,7 @@ const App = () => {
             <Route 
               path="/resume/:templateId" 
               element={
-                <ResumeProvider>
                   <ResumeBuilder />
-                </ResumeProvider>
               } 
             />
           </Routes>

@@ -57,7 +57,7 @@ const BaseTemplate = ({ data, templateConfig, isPdf = false }) => {
     );
   }
 
-  // Web Preview - Only show filled fields
+  // Web Preview - Fixed container rendering
   const { webClasses } = templateConfig;
   
   return (
@@ -65,28 +65,32 @@ const BaseTemplate = ({ data, templateConfig, isPdf = false }) => {
       <div className={webClasses.content}>
         <div className={webClasses.personalSection}>
           <h1 className={webClasses.name}>
-            {data.personal.name || 'Your Name'}
+            {data?.personal?.name || 'Your Name'}
           </h1>
           
-          {/* Only render contact info if it exists */}
-          <div className={webClasses.contactContainer}>
-            {data.personal.email && <div>Email: {data.personal.email}</div>}
-            {data.personal.phone && <div>Phone: {data.personal.phone}</div>}
-            {data.personal.address && <div>Address: {data.personal.address}</div>}
-          </div>
+          {/* Always render containers, conditionally render content */}
+          {(data?.personal?.email || data?.personal?.phone || data?.personal?.address) && (
+            <div className={webClasses.contactContainer}>
+              {data.personal.email && <div>Email: {data.personal.email}</div>}
+              {data.personal.phone && <div>Phone: {data.personal.phone}</div>}
+              {data.personal.address && <div>Address: {data.personal.address}</div>}
+            </div>
+          )}
           
-          <div className={webClasses.linkContainer}>
-            {data.personal.linkedin && (
-              <a href={data.personal.linkedin} className={webClasses.linkText} target="_blank" rel="noopener noreferrer">
-                LinkedIn: {data.personal.linkedin}
-              </a>
-            )}
-            {data.personal.website && (
-              <a href={data.personal.website} className={webClasses.linkText} target="_blank" rel="noopener noreferrer">
-                Website: {data.personal.website}
-              </a>
-            )}
-          </div>
+          {(data?.personal?.linkedin || data?.personal?.website) && (
+            <div className={webClasses.linkContainer}>
+              {data.personal.linkedin && (
+                <a href={data.personal.linkedin} className={webClasses.linkText} target="_blank" rel="noopener noreferrer">
+                  LinkedIn: {data.personal.linkedin}
+                </a>
+              )}
+              {data.personal.website && (
+                <a href={data.personal.website} className={webClasses.linkText} target="_blank" rel="noopener noreferrer">
+                  Website: {data.personal.website}
+                </a>
+              )}
+            </div>
+          )}
         </div>
 
         {/* Dynamic Sections */}
